@@ -8,6 +8,6 @@ uv run python manage.py migrate --settings=FactFlow.settings.production --noinpu
 
 echo "Starting Gunicorn..."
 exec gunicorn FactFlow.wsgi:application \
-    --bind 0.0.0.0:8000 \
+    --bind 0.0.0.0:$PORT \
     --workers 3 \
     --env DJANGO_SETTINGS_MODULE=FactFlow.settings.production
