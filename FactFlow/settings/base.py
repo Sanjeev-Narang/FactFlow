@@ -18,7 +18,7 @@ DEBUG = config('DEBUG', cast=bool, default=False)
 ALLOWED_HOSTS = config(
     "ALLOWED_HOSTS", 
     cast=Csv(), 
-    default=default=os.environ.get('ALLOWED_HOSTS')
+    default=os.environ.get('ALLOWED_HOSTS')
 )
 
 # Appends automatic fallback detection specifically for Railway system tags
