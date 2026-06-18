@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+      target: development
+    container_name: FactFlow-Frontend
+    volumes:
+      - ../:/app
+    env_file: ../.env.frontend   
+    ports:
+      - "5173:5173"
+    command: sh -c "tail -f /dev/null"

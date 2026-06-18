@@ -1,0 +1,97 @@
+.reportCard {
+  width: 100%;
+  max-width: 680px;
+  margin: 32px auto 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.reportHeader {
+  padding: 20px 24px;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  display: block;
+}
+
+.fileName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 4px 0 0 0;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.statusProcessing { background-color: #e0f2fe; color: #0369a1; }
+.statusCompleted { background-color: #dcfce7; color: #15803d; }
+.statusFailed { background-color: #fee2e2; color: #b91c1c; }
+
+.contentSection {
+  padding: 48px 32px;
+}
+
+.statusBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statusTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 16px 0 8px 0;
+}
+
+.statusText {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  max-width: 440px;
+  margin: 0;
+}
+
+.statusTextError {
+  font-size: 14px;
+  color: #b91c1c;
+  font-weight: 500;
+  margin: 0;
+}
+
+.spin { animation: spin 1.2s linear infinite; }
+.blueIcon { color: #0284c7; }
+.greenIcon { color: #16a34a; }
+.redIcon { color: #dc2626; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

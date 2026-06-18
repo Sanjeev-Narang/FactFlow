@@ -1,0 +1,20 @@
+.uv_cache/
+.venv/
+
+*__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Secrets ───────────────────────────────────────────────────
+.env
+.env.dev
+.env.production
+
+
+# ── Logs & Local Outputs ───────────────────────────────────────────────────
+logs/
+*.log
+
+# Django static files collection
+staticfiles/

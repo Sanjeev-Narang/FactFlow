@@ -1,0 +1,29 @@
+# ── Python & Environments ───────────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Package Manager Caches ──────────────────────────────────────────────────
+uv_cache/
+.uv/
+
+# ── Frontend (Baking this into a separate image later) ──────────────────────
+frontend/
+
+# ── Environment & Secrets (Crucial for security) ───────────────────────────
+.env
+.env.*
+!.env.example  # Optional: Keep if your build explicitly requires the template
+
+# ── Documentation & Git ─────────────────────────────────────────────────────
+.git/
+.gitignore
+README.md
+docs/
+
+# ── Logs & Local Outputs ───────────────────────────────────────────────────
+logs/
+*.log
+

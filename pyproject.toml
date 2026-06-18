@@ -1,0 +1,45 @@
+[project]
+name = "FactFlow"
+version = "0.1.0"
+description = " "
+readtme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "django",
+    "djangorestframework",
+    "psycopg[binary]",
+    "python-decouple",
+    "gunicorn",
+    "requests>=2.34.2",
+    "google-genai>=2.8.0",
+    "pypdf>=6.13.2",
+    "pdfplumber>=0.11.10",
+    "reportlab>=4.5.1",
+    "django-cors-headers>=4.9.0",
+    "dj-database-url>=3.1.2",
+    "whitenoise>=6.12.0",
+]
+
+[dependency-groups]
+dev = [
+    
+]
+test = [
+    "pytest-django",
+    "pytest",
+    "factory-boy",
+
+]                                    
+lint = [
+    "ruff",
+    "mypy",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.development"
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
