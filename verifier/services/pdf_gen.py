@@ -1,3 +1,4 @@
+import os
 import io
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
