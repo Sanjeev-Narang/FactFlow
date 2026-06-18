@@ -3,7 +3,7 @@ from decouple import config
 
 class TavilySearchService:
     def __init__(self):
-        self.api_key = config("TAVILY_API_KEY")
+        self.api_key = config("TAVILY_API_KEY", default=os.environ.get('TAVILY_API_KEY'))
         self.base_url = "https://api.tavily.com/search"
 
     def fetch_web_snippets(self, claim: str) -> str:

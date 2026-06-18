@@ -32,7 +32,7 @@ class GeminiClaimExtractorService:
     """
 
     def __init__(self):
-        self.client = genai.Client(api_key=config("GEMINI_API_KEY"))
+        self.client = genai.Client(api_key=config("GEMINI_API_KEY", default=os.environ.get('GEMINI_API_KEY')))
         self.model_name = "gemini-2.5-flash"
 
     def extract_claims(self, pdf_text: str) -> list[str]:
